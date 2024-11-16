@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.slide-in {
+  animation-name: slideIn;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+}
+
+.fade-in {
+  animation-name: fadeIn;
+  animation-duration: 0.4s;
+  animation-fill-mode: forwards;
+}
+
+.scale-in {
+  animation-name: scaleIn;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+}
