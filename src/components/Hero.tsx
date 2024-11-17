@@ -1,33 +1,39 @@
-import { motion } from 'framer-motion';
-import { FaLinkedin, FaTwitter, FaAppStore, FaGithub, FaFilePdf } from 'react-icons/fa';
-import React from 'react';
+import { motion } from "framer-motion";
+import {
+  FaLinkedin,
+  FaTwitter,
+  FaAppStore,
+  FaGithub,
+  FaFilePdf,
+} from "react-icons/fa";
+import React from "react";
 
 const socialLinks = [
   {
     icon: FaLinkedin,
-    url: 'https://www.linkedin.com/in/harry-j-094399193/details/experience/?profileId=ACoAAC1w6jAB_u_P28HUm1N-6rNNmlsktWRX1kk',
-    label: 'LinkedIn Profile'
+    url: "https://www.linkedin.com/in/harry-j-094399193/details/experience/?profileId=ACoAAC1w6jAB_u_P28HUm1N-6rNNmlsktWRX1kk",
+    label: "LinkedIn Profile",
   },
   {
     icon: FaTwitter,
-    url: 'https://x.com/stupefystr',
-    label: 'Twitter Profile'
+    url: "https://x.com/stupefystr",
+    label: "Twitter Profile",
   },
   {
     icon: FaGithub,
-    url: 'https://github.com/Harryjeffs',
-    label: 'Github Profile'
+    url: "https://github.com/Harryjeffs",
+    label: "Github Profile",
   },
   {
     icon: FaAppStore,
-    url: 'https://apps.apple.com/me/developer/harry-jeffs/id1456114868',
-    label: 'App Store Portfolio'
-  }, 
+    url: "https://apps.apple.com/me/developer/harry-jeffs/id1456114868",
+    label: "App Store Portfolio",
+  },
   {
     icon: FaFilePdf,
-    url: 'https://apps.apple.com/me/developer/harry-jeffs/id1456114868',
-    label: 'Resume'
-  }
+    url: "resume.pdf",
+    label: "Resume",
+  },
 ];
 
 export function Hero() {
@@ -39,7 +45,7 @@ export function Hero() {
           <div className="absolute inset-0 bg-gradient-to-b from-transparent to-gray-900" />
         </div>
       </div>
-      
+
       <div className="container mx-auto px-6 relative">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <motion.div
@@ -47,7 +53,7 @@ export function Hero() {
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.2 }}
           >
-            <motion.div 
+            <motion.div
               initial={{ y: -20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.1 }}
@@ -74,19 +80,20 @@ export function Hero() {
               Crafting Native iOS Experiences
             </h1>
             <p className="text-xl text-gray-300 mb-8">
-              Senior iOS Developer specializing in Swift and SwiftUI, 
-              with a passion for creating intuitive, performant & privacy focused applications. No trackers here!
+              Senior iOS Developer specializing in Swift and SwiftUI, with a
+              passion for creating intuitive, performant & privacy focused
+              applications. No trackers here!
             </p>
           </motion.div>
-          
+
           <motion.div
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ delay: 0.4 }}
             className="flex justify-center"
           >
-            <img 
-              src="images/memoji-header.PNG" 
+            <img
+              src="images/memoji-header.PNG"
               alt="Developer Memoji"
               className="w-64 h-64 md:w-96 md:h-96 object-contain"
             />

@@ -1,5 +1,5 @@
-import { motion } from 'framer-motion';
-import React from 'react';
+import { motion } from "framer-motion";
+import React from "react";
 
 const experiences = [
   {
@@ -8,8 +8,9 @@ const experiences = [
     role: "iOS Engineer",
     period: "Aug 2023 - Present",
     year: 2024,
-    description: "Led development of multiple App Store featured applications, implementing latest iOS features and design patterns.",
-    technologies: ["Swift", "Combine", "UIKit"]
+    description:
+      "At Concentrix Catalyst, I have worked on impactful projects such as ABS and QPS, where I applied my expertise to deliver high-quality solutions. My dedication and contributions have been recognized with peer awards, highlighting my commitment to excellence and collaboration.",
+    technologies: ["Combine", "Atomic UI", "CoreML", "Jenkins", "DocC", "MDM"],
   },
   {
     company: "nib Health Funds",
@@ -17,8 +18,9 @@ const experiences = [
     role: "iOS Engineer",
     period: "March 2022 - Aug 2023",
     year: 2018,
-    description: "Developed and maintained key features for Facebook's iOS app, focusing on performance optimization and user experience.",
-    technologies: ["UIKit", "Core Animation", "GraphQL"]
+    description:
+      "At nib Health, I worked on a range of health insurance apps, contributing to key projects that enhanced user experience and streamlined functionalities, such as claims processing and benefit exploration. My work focused on improving usability and ensuring seamless interactions for users.",
+    technologies: ["SwiftUI", "Core Animation", "PassKit"],
   },
   {
     company: "Sports Entertainment Network",
@@ -26,15 +28,22 @@ const experiences = [
     role: "Junior iOS Engineer",
     period: "Jan 2021 - March 2022",
     year: 2016,
-    description: "Built multiple iOS applications from scratch, handling entire development lifecycle from concept to App Store release.",
-    technologies: ["Objective-C", "Firebase", "Carplay", "Apple Watch"]
-  }
+    description:
+      "At Sports Entertainment Network, I worked on a variety of apps like Quaddie, SEN, Melbourne United, and Vision Christian Media. I focused on creating practical solutions that met the unique needs of different audiences, helping to deliver great experiences for users. I worked a lot with different technologies to bring these aopps to life.",
+    technologies: [
+      "Objective-C",
+      "Firebase",
+      "Carplay",
+      "Apple Watch",
+      "AVKit",
+    ],
+  },
 ];
 
 export function Experience() {
   return (
     <section className="py-10">
-      <motion.h2 
+      <motion.h2
         initial={{ y: 20, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         viewport={{ once: true }}
@@ -42,9 +51,8 @@ export function Experience() {
       >
         Professional Journey
       </motion.h2>
-      
+
       <div className="relative">
-        
         <div className="space-y-6">
           {experiences.map((exp, index) => (
             <motion.div
@@ -56,7 +64,7 @@ export function Experience() {
               className="relative"
             >
               {/* Mobile layout */}
-              <div className="space-y-2 bg-white/5 p-6 rounded-lg backdrop-blur-sm">
+              <div className="space-y-2 bg-white/5 p-6 rounded-2xl backdrop-blur-sm border border-white/10">
                 <div className="flex items-center gap-4">
                   <motion.img
                     initial={{ scale: 0.5, opacity: 0 }}
@@ -67,15 +75,17 @@ export function Experience() {
                     className="w-16 h-16 object-contain"
                   />
                   <div>
-                    <h3 className="text-xl font-bold text-white">{exp.company}</h3>
+                    <h3 className="text-xl font-bold text-white">
+                      {exp.company}
+                    </h3>
                     <p className="text-gray-300">{exp.role}</p>
                     <p className="text-sm text-gray-400">{exp.period}</p>
                   </div>
                 </div>
                 <p className="text-gray-400">{exp.description}</p>
                 <div className="flex flex-wrap gap-2">
-                  {exp.technologies.map(tech => (
-                    <span 
+                  {exp.technologies.map((tech) => (
+                    <span
                       key={tech}
                       className="px-3 py-1 bg-red-500/10 text-red-400 rounded-full text-sm"
                     >
@@ -84,7 +94,6 @@ export function Experience() {
                   ))}
                 </div>
               </div>
-
             </motion.div>
           ))}
         </div>
