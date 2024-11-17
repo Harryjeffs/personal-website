@@ -5,17 +5,17 @@ import React from 'react';
 const socialLinks = [
   {
     icon: FaLinkedin,
-    url: 'https://linkedin.com/in/yourusername',
+    url: 'https://www.linkedin.com/in/harry-j-094399193/details/experience/?profileId=ACoAAC1w6jAB_u_P28HUm1N-6rNNmlsktWRX1kk',
     label: 'LinkedIn Profile'
   },
   {
     icon: FaTwitter,
-    url: 'https://twitter.com/yourusername',
+    url: 'https://x.com/stupefystr',
     label: 'Twitter Profile'
   },
   {
     icon: FaGithub,
-    url: 'https://apps.apple.com/developer/yourid',
+    url: 'https://github.com/Harryjeffs',
     label: 'Github Profile'
   },
   {

@@ -75,18 +75,6 @@ export function Contact() {
             Send Message
           </button>
         </form>
-
-        <div className="flex justify-center space-x-6 mt-12">
-          <a href="#" className="text-2xl text-gray-400 hover:text-red-500 transition-colors">
-            <i className="fab fa-github"></i>
-          </a>
-          <a href="#" className="text-2xl text-gray-400 hover:text-red-500 transition-colors">
-            <i className="fab fa-twitter"></i>
-          </a>
-          <a href="#" className="text-2xl text-gray-400 hover:text-red-500 transition-colors">
-            <i className="fab fa-linkedin"></i>
-          </a>
-        </div>
       </motion.div>
     </section>
   );
