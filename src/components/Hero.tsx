@@ -38,7 +38,7 @@ const socialLinks = [
 
 export function Hero() {
   return (
-    <div className="relative overflow-hidden min-h-screen flex items-center">
+    <div className="relative overflow-hidden min-h-[75vh] flex items-center">
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-r from-hero-red to-hero-purple animate-gradient" />
         <div className="absolute inset-0 backdrop-blur-3xl">
@@ -46,7 +46,7 @@ export function Hero() {
         </div>
       </div>
 
-      <div className="container mx-auto px-6 relative">
+      <div className="container mx-auto p-6 relative">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <motion.div
             initial={{ y: 20, opacity: 0 }}

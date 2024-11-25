@@ -72,7 +72,7 @@ export function Experience() {
                     viewport={{ once: true }}
                     src={exp.logo}
                     alt={exp.company}
-                    className="w-16 h-16 object-contain"
+                    className="w-16 h-16 object-contain rounded-xl"
                   />
                   <div>
                     <h3 className="text-xl font-bold text-white">
