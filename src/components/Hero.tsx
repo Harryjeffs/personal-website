@@ -31,7 +31,7 @@ const socialLinks = [
   },
   {
     icon: FaFilePdf,
-    url: "resume.pdf",
+    url: "/harry-jeffs-resume.pdf",
     label: "Resume",
   },
 ];
