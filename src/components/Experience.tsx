@@ -45,6 +45,15 @@ const experiences: Experience[] = [
     year: 2016,
     description:
       "At Sports Entertainment Network, I worked on a variety of apps like Quaddie, SEN, Melbourne United, and Vision Christian Media. I focused on creating practical solutions that met the unique needs of different audiences, helping to deliver great experiences for users. I worked a lot with different technologies to bring these apps to life.",
+  },
+  {
+    company: "Overdose Digital",
+    logo: "images/overdose.png",
+    role: "Junior Frontend Developer",
+    period: "Oct 2019 - May 2020",
+    year: 2019,
+    description:
+      "I worked with an international team working on high profile client Shopify stores. Utalising Liquid, JQuery, and SCSS to create custom themes and features. I also worked on internal tools to help streamline SEO improvements for all client sites.",
   }
 ];
 
