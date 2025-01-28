@@ -1,7 +1,24 @@
 import { motion } from "framer-motion";
-import React from "react";
 
-const experiences = [
+interface Experience {
+  company: string;
+    logo: string;
+    role: string;
+    period: string;
+    year: number;
+    description: string;
+}
+
+const experiences: Experience[] = [
+  {
+    company: "Harry Jeffs",
+    logo: "images/memoji-header.PNG",
+    role: "Fullstack developer",
+    period: "Jan 2017 - Present",
+    year: 2025,
+    description:
+      "Having created my first website when Limewire was still around to track my scouts achievements, to building an online portal that helped grow a dying games community; I have always been passionate about creating simple & performant applications that users enjoy and use.",
+  },
   {
     company: "Concentrix Catalyst",
     logo: "images/cnx-logo.png",
@@ -9,8 +26,7 @@ const experiences = [
     period: "Aug 2023 - Present",
     year: 2024,
     description:
-      "At Concentrix Catalyst, I have worked on impactful projects such as ABS and QPS, where I applied my expertise to deliver high-quality solutions. My dedication and contributions have been recognized with peer awards, highlighting my commitment to excellence and collaboration.",
-    technologies: ["Combine", "Atomic UI", "CoreML", "Jenkins", "DocC", "MDM"],
+      "At Concentrix Catalyst, I am working on impactful projects such as ABS and QPS, where I applied my expertise to deliver live-saving applications. My dedication and contributions are recognized by my peers, highlighting my commitment to excellence and collaboration.",
   },
   {
     company: "nib Health Funds",
@@ -20,7 +36,6 @@ const experiences = [
     year: 2018,
     description:
       "At nib Health, I worked on a range of health insurance apps, contributing to key projects that enhanced user experience and streamlined functionalities, such as claims processing and benefit exploration. My work focused on improving usability and ensuring seamless interactions for users.",
-    technologies: ["SwiftUI", "Core Animation", "PassKit"],
   },
   {
     company: "Sports Entertainment Network",
@@ -29,15 +44,8 @@ const experiences = [
     period: "Jan 2021 - March 2022",
     year: 2016,
     description:
-      "At Sports Entertainment Network, I worked on a variety of apps like Quaddie, SEN, Melbourne United, and Vision Christian Media. I focused on creating practical solutions that met the unique needs of different audiences, helping to deliver great experiences for users. I worked a lot with different technologies to bring these aopps to life.",
-    technologies: [
-      "Objective-C",
-      "Firebase",
-      "Carplay",
-      "Apple Watch",
-      "AVKit",
-    ],
-  },
+      "At Sports Entertainment Network, I worked on a variety of apps like Quaddie, SEN, Melbourne United, and Vision Christian Media. I focused on creating practical solutions that met the unique needs of different audiences, helping to deliver great experiences for users. I worked a lot with different technologies to bring these apps to life.",
+  }
 ];
 
 export function Experience() {
@@ -49,7 +57,7 @@ export function Experience() {
         viewport={{ once: true }}
         className="text-3xl font-bold mb-16 text-white text-center"
       >
-        Professional Journey
+        Companies
       </motion.h2>
 
       <div className="relative">
@@ -83,16 +91,6 @@ export function Experience() {
                   </div>
                 </div>
                 <p className="text-gray-400">{exp.description}</p>
-                <div className="flex flex-wrap gap-2">
-                  {exp.technologies.map((tech) => (
-                    <span
-                      key={tech}
-                      className="px-3 py-1 bg-red-500/10 text-red-400 rounded-full text-sm"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
               </div>
             </motion.div>
           ))}

@@ -9,8 +9,8 @@ export default function App() {
       <main className="relative">
         <Hero />
         <div className="container mx-auto px-6">
-          <Experience />
           <ProjectCarousel />
+          <Experience />
           <Contact />
         </div>
       </main>

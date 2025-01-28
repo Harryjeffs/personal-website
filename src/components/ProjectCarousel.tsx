@@ -7,36 +7,44 @@ interface Project {
   description: string;
   logo: string;
   tintColor: string;
+  alternateTintColor?: string;
   appStoreLink: string;
+  technologies?: string[];
 }
 
 const professionalProjects: Project[] = [
   {
     id: 0,
-    title: "Australian Bureau of Statistics",
+    title: "Australian Bureau of Statistics (ABS)",
     description:
-      "Worked with a collobrative team that developed an internal app for ABS that helps support fieldworkers collect data for the Australian Census.",
+      "Currently working with a collobrative team that develops a proprietary app that helps support fieldworkers more efficiently collect data for the 2026 Australian Census. I am responsible for ensuring the team smoothly transitions the existing Combine code to Concurrency to help improve perfomance of the app and team.",
     logo: "images/abs-logo.png",
     tintColor: "#0d4e78",
     appStoreLink: "https://www.abs.gov.au",
+    alternateTintColor: "#ffffff",
+    technologies: ["Gitlab", "SwiftUI", "Concurrency", "Combine"]
   },
   {
     id: 1,
-    title: "Queensland Police Service",
+    title: "Queensland Police Service (QPS)",
     description:
-      "Worked on a large team to develop an app for QPS frontline officers to help them access critical information and resources when on duty. I optimised improvements to the CI which helped reduce build times by ~300%.",
+      "Worked on a large team to develop an app for frontline police officers to help them access critical information and resources when on duty. I optimised improvements to the CI which helped reduce build times by ~300%.",
     logo: "images/qps-logo.png",
     tintColor: "#002148",
+    alternateTintColor: "#ffffff",
     appStoreLink: "https://betterfutureawards.com/aus24/project.asp?ID=30406",
+    technologies: ["Combine", "Jenkins", "CoreML", "AtomicUI", "UIKit"]
   },
   {
     id: 2,
     title: "nib Health",
     description:
-      "I contributed to the development of the nib health insurance app in Australia by rewriting the Home Screen in SwiftUI, simplifying navigation and making it easier for users to explore their benefits and health credits. Additionally, I worked closely with the UX team to enhance the overall user experience, improving usability and ensuring the app met the needs of its users.",
+      "I was instrumental in the development of the nib health insurance app in Australia by rewriting the home screen in SwiftUI, simplifying navigation and making it easier for users to explore their benefits and health credits.",
     logo: "images/nib-logo.png",
     tintColor: "#124b38",
+    alternateTintColor: "#9be383",
     appStoreLink: "https://apps.apple.com/au/app/nib-health/id373883175",
+    technologies: ["SwiftUI", "Passkit", "Combine", "Github Actions"]
   },
   {
     id: 3,
@@ -46,6 +54,7 @@ const professionalProjects: Project[] = [
     logo: "images/gu-logo.png",
     tintColor: "#4194ac",
     appStoreLink: "https://apps.apple.com/au/app/gu-health/id1531977347",
+    technologies: ["SwiftUI", "Combine", "Passkit", "Github Actions"]
   },
   {
     id: 4,
@@ -55,6 +64,8 @@ const professionalProjects: Project[] = [
     logo: "images/sen-logo.png",
     tintColor: "#032133",
     appStoreLink: "https://apps.apple.com/au/app/sen-senz/id1147923999",
+    alternateTintColor: "#ffffff",
+    technologies: ["Carplay", "UIKit", "AVPlayer", "Objective-C", "API"]
   },
   {
     id: 5,
@@ -64,6 +75,7 @@ const professionalProjects: Project[] = [
     logo: "images/quaddie-logo.png",
     tintColor: "#d20909",
     appStoreLink: "https://apps.apple.com/au/app/the-quaddie/id1545504175",
+    technologies: ["UIKit", "API", "AVPlayer", "Authentication"]
   },
   {
     id: 6,
@@ -73,16 +85,18 @@ const professionalProjects: Project[] = [
     logo: "images/melb-united-logo.png",
     tintColor: "#0053ff",
     appStoreLink: "https://apps.apple.com/au/app/melbourne-united/id1579793032",
+    technologies: ["UIKit"]
   },
   {
     id: 7,
     title: "Vision Christian Media",
     description:
-      "Experienced iOS Engineer adept at developing advanced applications. Created Vision Christian Media app with backend-driven UI, AVPlayer, and Apple CarPlay support. Seamlessly access live radio, devotions, podcasts, news, articles, videos, and Bible. Committed to user-friendly experiences.",
+      "Created Vision Christian Media app with backend-driven UI, AVPlayer, and Apple CarPlay support. Seamlessly access live radio, devotions, podcasts, news, articles, videos, and Bible. ",
     logo: "images/vcm-logo.png",
     tintColor: "#00a9df",
     appStoreLink:
       "https://apps.apple.com/au/app/vision-christian-media/id541098165",
+    technologies: ["UIKit", "AVPlayer", "Carplay", "Webkit", "API"]
   },
 ];
 
@@ -95,16 +109,19 @@ const personalProjects: Project[] = [
     logo: "images/bricksee-logo.png",
     tintColor: "#e0211a",
     appStoreLink: "https://apps.apple.com/au/app/bricksee/id1531247091",
+    technologies: ["CoreML", "Firebase", "Realm", "SwiftUI", "Concurrency", "Fastlane", "YoloV8"]
   },
   {
     id: 8,
     title: "Metalingual",
     description:
-      "Fastlane metadata translator with a focus on privacy and accuracy. But being completely free for willing devs. Developers shouldnt have to pay a monthly subscription to translate text easily & accurately.",
+      "Fastlane metadata translator with a focus on privacy and accuracy. Whilst staying completely free. Developers should not have to pay a monthly subscription to translate text easily & accurately!",
     logo: "images/metalingual-logo.png",
     tintColor: "#13182e",
+    alternateTintColor: "#ffffff",
     appStoreLink:
       "https://apps.apple.com/au/app/metalingual/id6670712392?mt=12",
+    technologies: ["SwiftUI", "URLSession", "Machine Learning", "Fastlane"]
   },
   {
     id: 9,
@@ -114,6 +131,7 @@ const personalProjects: Project[] = [
     logo: "images/syncula-logo.png",
     tintColor: "#02b147",
     appStoreLink: "https://apps.apple.com/au/app/syncula/id6482847967",
+    technologies: ["Safari Extensions", "EventKit", "SwiftUI", "CoreData", "CoreML"]
   },
 ];
 
@@ -184,6 +202,22 @@ function ProjectSection({
                 >
                   View on App Store
                 </a>
+
+                
+                <div className="flex flex-wrap gap-2 mt-4">
+                  {project.technologies?.map((tech) => (
+                    <span
+                      key={tech}
+                      className="px-3 py-1 rounded-full text-sm"
+                      style={{
+                        color: project.alternateTintColor ?? project.tintColor,
+                        backgroundColor: `${project.alternateTintColor ?? project.tintColor}20`
+                       }} 
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
               </div>
             </div>
           </motion.div>
@@ -206,10 +240,10 @@ export function ProjectCarousel() {
       </motion.h2>
 
       <ProjectSection
-        title="Professional Work"
+        title="Professional"
         projects={professionalProjects}
       />
-      <ProjectSection title="Personal Projects" projects={personalProjects} />
+      <ProjectSection title="Personal" projects={personalProjects} />
     </section>
   );
 }

@@ -80,7 +80,7 @@ export function Hero() {
               Crafting Native iOS Experiences
             </h1>
             <p className="text-xl text-gray-300 mb-8">
-              Senior iOS Developer specializing in Swift and SwiftUI, with a
+              Senior iOS Engineer specializing in Swift and SwiftUI, with a
               passion for creating intuitive, performant & privacy focused
               applications. No trackers here!
             </p>
