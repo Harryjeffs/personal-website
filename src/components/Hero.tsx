@@ -93,9 +93,9 @@ export function Hero() {
             className="flex justify-center"
           >
             <img
-              src="images/memoji-header.PNG"
+              src="images/hero-device.png"
               alt="Developer Memoji"
-              className="w-64 h-64 md:w-96 md:h-96 object-contain"
+              className="w-72 object-contain rotate-6"
             />
           </motion.div>
         </div>

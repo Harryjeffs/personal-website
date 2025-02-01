@@ -58,7 +58,7 @@ const professionalProjects: Project[] = [
   },
   {
     id: 4,
-    title: "SEN",
+    title: "Sports Entertainment Network (SEN)",
     description:
       "As a key developer for the SEN app, I contributed to the creation of the leading sports media platform in Australia and New Zealand. My role involved developing robust code, implementing live content features, and ensuring a personalized and localized user experience. I played a vital role in integrating CarPlay enhancing the apps usability while driving. This involved seamless integration with the respective frameworks to provide a seamless sports media experience on the road",
     logo: "images/sen-logo.png",
