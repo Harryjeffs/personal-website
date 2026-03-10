@@ -17,7 +17,7 @@ const professionalProjects: Project[] = [
     id: 0,
     title: "Australian Bureau of Statistics (ABS)",
     description:
-      "Currently working with a collobrative team that develops a proprietary app that helps support fieldworkers more efficiently collect data for the 2026 Australian Census. I am responsible for ensuring the team smoothly transitions the existing Combine code to Concurrency to help improve perfomance of the app and team.",
+      "Currently working with a collaborative team that develops a proprietary app that helps support fieldworkers more efficiently collect data for the 2026 Australian Census. I am responsible for ensuring the team smoothly transitions the existing Combine code to Concurrency to help improve perfomance of the app and team.",
     logo: "images/abs-logo.png",
     tintColor: "#0d4e78",
     appStoreLink: "https://www.abs.gov.au",
